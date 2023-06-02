@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:jogodomilhao/screens/help.dart';
 import 'package:jogodomilhao/screens/question-page.dart';
 
 class HomePage extends StatelessWidget {
@@ -7,6 +8,20 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.help_outline),
+            onPressed: () {
+              Navigator.of(context).push(_createRoute(HelpPage()));
+            },
+          ),
+          const SizedBox(
+            width: 10,
+          )
+        ],
+      ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -19,18 +34,20 @@ class HomePage extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 10),
-            const Text(
-              'JOGO DO CALEBÃO',
-              style: TextStyle(
-                fontSize: 48,
-                fontWeight: FontWeight.bold,
-                color: Colors.red,
+            const Center(
+              child: Text(
+                'JOGO DO CALEBÃO',
+                style: TextStyle(
+                  fontSize: 41,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.red,
+                ),
               ),
             ),
             const SizedBox(height: 30),
             ElevatedButton(
               onPressed: () {
-                Navigator.of(context).push(_createRoute());
+                Navigator.of(context).push(_createRoute(QuestionPage()));
               },
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.blue[900],
@@ -57,9 +74,9 @@ class HomePage extends StatelessWidget {
     );
   }
 
-  Route _createRoute() {
+  Route _createRoute(destination) {
     return PageRouteBuilder(
-      pageBuilder: (context, animation, secondaryAnimation) => QuestionPage(),
+      pageBuilder: (context, animation, secondaryAnimation) => destination,
       transitionsBuilder: (context, animation, secondaryAnimation, child) {
         var begin = const Offset(1.0, 0.0);
         var end = Offset.zero;

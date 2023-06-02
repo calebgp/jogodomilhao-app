@@ -14,20 +14,27 @@ class _QuestionPageState extends State<QuestionPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.black,
+        backgroundColor: Colors.transparent,
+        title: const Text(
+          "Questão 1",
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        centerTitle: true,
       ),
       body: Padding(
-        padding: EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(16.0),
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              SizedBox(height: 20.0),
+              const SizedBox(height: 20.0),
               Text(
                 question,
-                style: TextStyle(fontSize: 24.0, color: Colors.white),
+                style: const TextStyle(fontSize: 24.0, color: Colors.white),
               ),
-              SizedBox(height: 30.0),
+              const SizedBox(height: 30.0),
               Expanded(
                 child: ListView.builder(
                   itemCount: options.length,
@@ -36,8 +43,8 @@ class _QuestionPageState extends State<QuestionPage> {
                     return Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: RadioListTile<String>(
-                        title:
-                            Text(option, style: TextStyle(color: Colors.white)),
+                        title: Text(option,
+                            style: const TextStyle(color: Colors.white)),
                         tileColor: Colors.blue[900],
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(10.0),
@@ -55,7 +62,7 @@ class _QuestionPageState extends State<QuestionPage> {
                   },
                 ),
               ),
-              Container(
+              SizedBox(
                 width: 300,
                 height: 50,
                 child: ElevatedButton(
@@ -74,13 +81,13 @@ class _QuestionPageState extends State<QuestionPage> {
                       context: context,
                       builder: (BuildContext context) {
                         return AlertDialog(
-                          title: Text(
+                          title: const Text(
                             "Confirmação da escolha",
                             style: TextStyle(color: Colors.white),
                           ),
                           content: Text(
                             "Você escolheu a opção $selectedOption. Deseja confirmar?",
-                            style: TextStyle(color: Colors.white),
+                            style: const TextStyle(color: Colors.white),
                           ),
                           backgroundColor: Colors.blue[900],
                           actions: <Widget>[
@@ -88,7 +95,7 @@ class _QuestionPageState extends State<QuestionPage> {
                               style: ElevatedButton.styleFrom(
                                 primary: Colors.red,
                               ),
-                              child: Text(
+                              child: const Text(
                                 "Cancelar",
                                 style: TextStyle(color: Colors.white),
                               ),
@@ -100,7 +107,7 @@ class _QuestionPageState extends State<QuestionPage> {
                               style: ElevatedButton.styleFrom(
                                 primary: Colors.green,
                               ),
-                              child: Text(
+                              child: const Text(
                                 "Confirmar",
                                 style: TextStyle(color: Colors.white),
                               ),
@@ -114,7 +121,7 @@ class _QuestionPageState extends State<QuestionPage> {
                       },
                     );
                   },
-                  child: Text(
+                  child: const Text(
                     'Responder',
                     style: TextStyle(
                       fontSize: 20,
