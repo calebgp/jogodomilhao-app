@@ -26,7 +26,7 @@ class MyAppBar extends StatelessWidget implements PreferredSize {
   Widget build(BuildContext context) {
     double height =
         MediaQuery.of(context).orientation == Orientation.landscape ? 80 : 100;
-    var color = Theme.of(context).colorScheme.onBackground;
+    var color = Theme.of(context).colorScheme.onSurface;
     return AppBar(
       backgroundColor: Colors.transparent,
       centerTitle: true,
@@ -51,7 +51,7 @@ class MyAppBar extends StatelessWidget implements PreferredSize {
                     },
                     icon: Icon(
                       Icons.arrow_back_ios,
-                      color: Colors.white,
+                      color: color,
                       size: 25,
                     ),
                   )

@@ -7,14 +7,15 @@ class HelpPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: const MyAppBar(
+    return const Scaffold(
+      appBar: MyAppBar(
+        hasBackRoute: true,
         title: "Ajuda",
         showHelp: false,
       ),
       body: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: const HelpContainer(),
+        padding: EdgeInsets.all(16.0),
+        child: HelpContainer(),
       ),
     );
   }

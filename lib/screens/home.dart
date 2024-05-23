@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:jogodomilhao/screens/help.dart';
-import 'package:jogodomilhao/screens/question-page.dart';
+import 'package:jogodomilhao/global/screens/help.dart';
+import 'package:jogodomilhao/modules/question/view.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -14,7 +14,11 @@ class HomePage extends StatelessWidget {
           IconButton(
             icon: const Icon(Icons.help_outline),
             onPressed: () {
-              Navigator.of(context).push(_createRoute(HelpPage()));
+              Navigator.of(context).push(
+                _createRoute(
+                  const HelpPage(),
+                ),
+              );
             },
           ),
           const SizedBox(
@@ -47,7 +51,11 @@ class HomePage extends StatelessWidget {
             const SizedBox(height: 30),
             ElevatedButton(
               onPressed: () {
-                Navigator.of(context).push(_createRoute(QuestionPage()));
+                Navigator.of(context).push(
+                  _createRoute(
+                    QuestionPage(),
+                  ),
+                );
               },
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.blue[900],

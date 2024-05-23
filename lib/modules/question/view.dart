@@ -12,6 +12,7 @@ class _QuestionPageState extends State<QuestionPage> {
 
   @override
   Widget build(BuildContext context) {
+    var onSurface = Theme.of(context).colorScheme.onSurface;
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.transparent,
@@ -32,7 +33,10 @@ class _QuestionPageState extends State<QuestionPage> {
               const SizedBox(height: 20.0),
               Text(
                 question,
-                style: const TextStyle(fontSize: 24.0, color: Colors.white),
+                style: TextStyle(
+                  fontSize: 24.0,
+                  color: onSurface,
+                ),
               ),
               const SizedBox(height: 30.0),
               Expanded(
@@ -43,9 +47,12 @@ class _QuestionPageState extends State<QuestionPage> {
                     return Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: RadioListTile<String>(
-                        title: Text(option,
-                            style: const TextStyle(color: Colors.white)),
+                        title: Text(
+                          option,
+                          style: const TextStyle(color: Colors.white),
+                        ),
                         tileColor: Colors.blue[900],
+                        activeColor: Colors.white,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(10.0),
                         ),
@@ -62,68 +69,72 @@ class _QuestionPageState extends State<QuestionPage> {
                   },
                 ),
               ),
-              SizedBox(
-                child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.red,
-                    padding: const EdgeInsets.symmetric(
-                      vertical: 15,
-                      horizontal: 30,
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: SizedBox(
+                  width: double.infinity,
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.red,
+                      padding: const EdgeInsets.symmetric(
+                        vertical: 15,
+                        horizontal: 30,
+                      ),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(30),
+                      ),
                     ),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(30),
-                    ),
-                  ),
-                  onPressed: () {
-                    showDialog(
-                      context: context,
-                      builder: (BuildContext context) {
-                        return AlertDialog(
-                          title: const Text(
-                            "Confirmação da escolha",
-                            style: TextStyle(color: Colors.white),
-                          ),
-                          content: Text(
-                            "Você escolheu a opção $selectedOption. Deseja confirmar?",
-                            style: const TextStyle(color: Colors.white),
-                          ),
-                          backgroundColor: Colors.blue[900],
-                          actions: <Widget>[
-                            ElevatedButton(
-                              style: ElevatedButton.styleFrom(
-                                primary: Colors.red,
-                              ),
-                              child: const Text(
-                                "Cancelar",
-                                style: TextStyle(color: Colors.white),
-                              ),
-                              onPressed: () {
-                                Navigator.of(context).pop();
-                              },
+                    onPressed: () {
+                      showDialog(
+                        context: context,
+                        builder: (BuildContext context) {
+                          return AlertDialog(
+                            title: const Text(
+                              "Confirmação da escolha",
+                              style: TextStyle(color: Colors.white),
                             ),
-                            ElevatedButton(
-                              style: ElevatedButton.styleFrom(
-                                primary: Colors.green,
-                              ),
-                              child: const Text(
-                                "Confirmar",
-                                style: TextStyle(color: Colors.white),
-                              ),
-                              onPressed: () {
-                                Navigator.of(context).pop();
-                                // Coloque aqui o código para enviar a resposta
-                              },
+                            content: Text(
+                              "Você escolheu a opção $selectedOption. Deseja confirmar?",
+                              style: const TextStyle(color: Colors.white),
                             ),
-                          ],
-                        );
-                      },
-                    );
-                  },
-                  child: Text(
-                    'Responder',
-                    style: TextStyle(
-                      fontSize: 20,
-                      color: Theme.of(context).colorScheme.onPrimary,
+                            backgroundColor: Colors.blue[900],
+                            actions: <Widget>[
+                              ElevatedButton(
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: Colors.red,
+                                ),
+                                child: const Text(
+                                  "Cancelar",
+                                  style: TextStyle(color: Colors.white),
+                                ),
+                                onPressed: () {
+                                  Navigator.of(context).pop();
+                                },
+                              ),
+                              ElevatedButton(
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: Colors.green,
+                                ),
+                                child: const Text(
+                                  "Confirmar",
+                                  style: TextStyle(color: Colors.white),
+                                ),
+                                onPressed: () {
+                                  Navigator.of(context).pop();
+                                  // Coloque aqui o código para enviar a resposta
+                                },
+                              ),
+                            ],
+                          );
+                        },
+                      );
+                    },
+                    child: Text(
+                      'Responder',
+                      style: TextStyle(
+                        fontSize: 20,
+                        color: Theme.of(context).colorScheme.onPrimary,
+                      ),
                     ),
                   ),
                 ),
