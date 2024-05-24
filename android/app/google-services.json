@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "321405619998",
+    "project_id": "jogodocalebao",
+    "storage_bucket": "jogodocalebao.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:321405619998:android:a5b343e18ffb5dac03030f",
+        "android_client_info": {
+          "package_name": "com.calebgp.jogodocalebao"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDE9DiRNDGqMu6-Zfe02m69mb8QP0k7Z78"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

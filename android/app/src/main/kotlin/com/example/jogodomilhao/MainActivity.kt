@@ -1,6 +1,6 @@
-package com.example.jogodomilhao
+package com.calebgp.jogodocalebao
 
 import io.flutter.embedding.android.FlutterActivity
 
-class MainActivity: FlutterActivity() {
+class MainActivity : FlutterActivity() {
 }
