@@ -2,7 +2,7 @@
     package="com.calebgp.jogodocalebao">
 
     <application
-        android:label="jogodomilhao"
+        android:label="jogodocalebao"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

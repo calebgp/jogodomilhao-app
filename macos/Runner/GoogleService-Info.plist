@@ -11,9 +11,9 @@
 	<key>BUNDLE_ID</key>
 	<string>com.calebgp.jogodocalebao</string>
 	<key>PROJECT_ID</key>
-	<string>jogodomilhao-terminal</string>
+	<string>jogodocalebao-terminal</string>
 	<key>STORAGE_BUCKET</key>
-	<string>jogodomilhao-terminal.appspot.com</string>
+	<string>jogodocalebao-terminal.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:jogodomilhao/global/components/appbar.dart';
-import 'package:jogodomilhao/modules/question/view.dart';
-import 'package:jogodomilhao/modules/seetings/utils/create_route.dart';
+import 'package:jogodocalebao/global/components/appbar.dart';
+import 'package:jogodocalebao/modules/question/view.dart';
+import 'package:jogodocalebao/modules/seetings/utils/create_route.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});

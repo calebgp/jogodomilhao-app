@@ -1,1 +1,39 @@
-{"flutter":{"platforms":{"android":{"default":{"projectId":"jogodocalebao","appId":"1:321405619998:android:a5b343e18ffb5dac03030f","fileOutput":"android/app/google-services.json"}},"ios":{"default":{"projectId":"jogodocalebao","appId":"1:321405619998:ios:f670a1c6f69f108a03030f","uploadDebugSymbols":false,"fileOutput":"ios/Runner/GoogleService-Info.plist"}},"macos":{"default":{"projectId":"jogodomilhao-terminal","appId":"1:960833360040:ios:8bdad266539c0f8eeb329d","uploadDebugSymbols":false,"fileOutput":"macos/Runner/GoogleService-Info.plist"}},"dart":{"lib/firebase_options.dart":{"projectId":"jogodocalebao","configurations":{"android":"1:321405619998:android:a5b343e18ffb5dac03030f","ios":"1:321405619998:ios:f670a1c6f69f108a03030f","web":"1:321405619998:web:27c567c68b64fd7903030f"}}}}}}
+{
+  "flutter": {
+    "platforms": {
+      "android": {
+        "default": {
+          "projectId": "jogodocalebao",
+          "appId": "1:321405619998:android:a5b343e18ffb5dac03030f",
+          "fileOutput": "android/app/google-services.json"
+        }
+      },
+      "ios": {
+        "default": {
+          "projectId": "jogodocalebao",
+          "appId": "1:321405619998:ios:f670a1c6f69f108a03030f",
+          "uploadDebugSymbols": false,
+          "fileOutput": "ios/Runner/GoogleService-Info.plist"
+        }
+      },
+      "macos": {
+        "default": {
+          "projectId": "jogodocalebao-terminal",
+          "appId": "1:960833360040:ios:8bdad266539c0f8eeb329d",
+          "uploadDebugSymbols": false,
+          "fileOutput": "macos/Runner/GoogleService-Info.plist"
+        }
+      },
+      "dart": {
+        "lib/firebase_options.dart": {
+          "projectId": "jogodocalebao",
+          "configurations": {
+            "android": "1:321405619998:android:a5b343e18ffb5dac03030f",
+            "ios": "1:321405619998:ios:f670a1c6f69f108a03030f",
+            "web": "1:321405619998:web:27c567c68b64fd7903030f"
+          }
+        }
+      }
+    }
+  }
+}

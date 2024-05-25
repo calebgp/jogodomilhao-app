@@ -1,8 +1,8 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:jogodomilhao/core/firebase_options.dart';
-import 'package:jogodomilhao/core/theme.dart';
-import 'package:jogodomilhao/home.dart';
+import 'package:jogodocalebao/core/firebase_options.dart';
+import 'package:jogodocalebao/core/theme.dart';
+import 'package:jogodocalebao/home.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -11,12 +11,12 @@ Future<void> main() async {
     options: DefaultFirebaseOptions.currentPlatform,
   );
   runApp(
-    const JogoDoMilhaoApp(),
+    const JogoDoCalebaoApp(),
   );
 }
 
-class JogoDoMilhaoApp extends StatelessWidget {
-  const JogoDoMilhaoApp({super.key});
+class JogoDoCalebaoApp extends StatelessWidget {
+  const JogoDoCalebaoApp({super.key});
 
   @override
   Widget build(BuildContext context) {

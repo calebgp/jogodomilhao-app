@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:jogodomilhao/core/constants.dart';
+import 'package:jogodocalebao/core/constants.dart';
 
 class HelpContainer extends StatelessWidget {
   const HelpContainer({Key? key}) : super(key: key);

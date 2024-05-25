@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:jogodomilhao/global/components/appbar.dart';
-import 'package:jogodomilhao/modules/help/container.dart';
+import 'package:jogodocalebao/global/components/appbar.dart';
+import 'package:jogodocalebao/modules/help/container.dart';
 
 class HelpPage extends StatelessWidget {
   const HelpPage({super.key});

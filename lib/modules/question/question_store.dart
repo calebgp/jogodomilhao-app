@@ -1,4 +1,4 @@
-import 'package:jogodomilhao/models/question.dart';
+import 'package:jogodocalebao/models/question.dart';
 import 'package:mobx/mobx.dart';
 
 part 'question_store.g.dart';

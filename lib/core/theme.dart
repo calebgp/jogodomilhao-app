@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:jogodomilhao/core/colors.dart';
+import 'package:jogodocalebao/core/colors.dart';
 
 ThemeData myLightTheme = ThemeData(
     primaryColor: MyColors.primary,
